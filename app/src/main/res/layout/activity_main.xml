@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+  <SeekBar
+    android:id="@+id/alpha_seekbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:minWidth="300dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/red_seekbar"/>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Alpha"
+    android:textSize="20sp"
+    app:layout_constraintStart_toStartOf="@id/alpha_seekbar"
+    app:layout_constraintTop_toBottomOf="@id/alpha_seekbar"/>
+
+  <EditText
+    android:id="@+id/alpha_edit_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="alpha input [0:255]"
+    android:inputType="number"
+    app:layout_constraintEnd_toEndOf="@id/alpha_seekbar"
+    app:layout_constraintTop_toBottomOf="@id/alpha_seekbar"/>
+
+  <SeekBar
+    android:id="@+id/red_seekbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:minWidth="300dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/alpha_seekbar"
+    app:layout_constraintBottom_toTopOf="@id/green_seekbar"/>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Red"
+    android:textSize="20sp"
+    app:layout_constraintStart_toStartOf="@id/red_seekbar"
+    app:layout_constraintTop_toBottomOf="@id/red_seekbar"/>
+
+  <EditText
+    android:id="@+id/red_edit_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="red input [0:255]"
+    android:inputType="number"
+    app:layout_constraintEnd_toEndOf="@id/red_seekbar"
+    app:layout_constraintTop_toBottomOf="@id/red_seekbar"/>
+
+  <SeekBar
+    android:id="@+id/green_seekbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:minWidth="300dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/red_seekbar"
+    app:layout_constraintBottom_toTopOf="@id/blue_seekbar"/>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Green"
+    android:textSize="20sp"
+    app:layout_constraintStart_toStartOf="@id/green_seekbar"
+    app:layout_constraintTop_toBottomOf="@id/green_seekbar"/>
+
+  <EditText
+    android:id="@+id/green_edit_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="green input [0:255]"
+    android:inputType="number"
+    app:layout_constraintEnd_toEndOf="@id/green_seekbar"
+    app:layout_constraintTop_toBottomOf="@id/green_seekbar"/>
+
+  <SeekBar
+    android:id="@+id/blue_seekbar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minHeight="50dp"
+    android:minWidth="300dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/green_seekbar"
+    app:layout_constraintBottom_toTopOf="@id/image_view"/>
+
+  <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Blue"
+    android:textSize="20sp"
+    app:layout_constraintStart_toStartOf="@id/blue_seekbar"
+    app:layout_constraintTop_toBottomOf="@id/blue_seekbar"/>
+
+  <EditText
+    android:id="@+id/blue_edit_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:hint="blue input [0:255]"
+    android:inputType="number"
+    app:layout_constraintEnd_toEndOf="@id/blue_seekbar"
+    app:layout_constraintTop_toBottomOf="@id/blue_seekbar"/>
+
+  <ImageView
+    android:id="@+id/image_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="100dp"
+    android:minHeight="100dp"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/blue_edit_text"
+    app:layout_constraintBottom_toTopOf="@id/hex_text"/>
+
+  <EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/hex_text"
+    app:layout_constraintTop_toBottomOf="@id/image_view"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:hint="enter hex value [00000000:FFFFFFFF]"
+    app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
