@@ -183,16 +183,16 @@ public class MainActivity extends AppCompatActivity {
        @Override
        public void onFocusChange(View view, boolean b) {
 
-//         String hexString = hexText.getText().toString();
-//
-//         if (!(hexString.matches("^[0-9a-fA-F]+$"))){
-//           hexString="00000000";
-//         }
+         String hexString = hexText.getText().toString();
 
-         alpha = Integer.valueOf(hexText.getText().toString().substring(0,2),16);
-         red = Integer.valueOf(hexText.getText().toString().substring(2,4),16);
-         green = Integer.valueOf(hexText.getText().toString().substring(4,6),16);
-         blue = Integer.valueOf(hexText.getText().toString().substring(6,8),16);
+         if (!(hexString.matches("^[0-9a-fA-F]+$"))){
+           hexString="00000000";
+         }
+
+         alpha = Integer.valueOf(hexString.substring(0,2),16);
+         red = Integer.valueOf(hexString.substring(2,4),16);
+         green = Integer.valueOf(hexString.substring(4,6),16);
+         blue = Integer.valueOf(hexString.substring(6,8),16);
 
          alphaSeekbar.setProgress(alpha);
          redSeekbar.setProgress(red);
