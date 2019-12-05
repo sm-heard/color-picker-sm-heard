@@ -183,11 +183,12 @@ public class MainActivity extends AppCompatActivity {
        @Override
        public void onFocusChange(View view, boolean b) {
 
-         String hexString = hexText.getText().toString();
+//         String hexString = hexText.getText().toString();
+//
+//         if (!(hexString.matches("^[0-9a-fA-F]+$"))){
+//           hexString="00000000";
+//         }
 
-         if (!(hexString.matches("^[0-9a-fA-F]+$"))){
-           hexString="00000000";
-         }
          alpha = Integer.valueOf(hexText.getText().toString().substring(0,2),16);
          red = Integer.valueOf(hexText.getText().toString().substring(2,4),16);
          green = Integer.valueOf(hexText.getText().toString().substring(4,6),16);
